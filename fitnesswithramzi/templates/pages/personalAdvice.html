@@ -1,0 +1,52 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="pers-adv program">
+        <h1>Personal Advices</h1>
+        <div class="adv-cont program-container">
+            
+            {% for advice in advices %}
+            <div class="advice-div adv ">
+                <h2>
+                   {{advice.title}}
+                </h2>
+                <div class="adv-text">
+                    <p>
+                        {{advice.content}}    
+                    </p>  
+                </div>  
+           
+                {% if advice.image %} 
+                    <div class="adv-media">
+                        <a href="/{{advice.image.url}}">
+                            <img src="/{{advice.image.url}}" alt="">
+                        </a>
+                    </div>
+                {% endif %}
+                {% if advice.url %} 
+                    <div class="adv-media">
+                        <iframe src="{{advice.url}}" frameborder="0"></iframe>
+                    </div>
+                {% endif %}
+           
+            </div>
+            {% empty %}
+            <div class="advice-div adv ">
+                <h2>
+                    There Are No Advices Till Now
+                </h2>
+                <div class="adv-text ">
+                    <p style="color:red">
+                        <span>There Are No Advices Till Now</span>
+                    </p>  
+                </div>  
+           
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock content %}

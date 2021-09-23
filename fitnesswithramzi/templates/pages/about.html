@@ -1,0 +1,128 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="block abt">
+        <h1>About</h1>
+
+        <div class="abt-cont shadow">
+
+            {% if about %}
+
+            {% for abt in about %}
+                
+            <div class="abt-text-img">
+                <div class="abt-text-a"><h2 id="abttxth2">Who is "Ramzi Soualeh"</h2></div>
+                <div class="abt-image">
+                   <div class="img">
+                    <img src="{{abt.mainImage.url}}" alt="">
+                   </div>
+                   <div class="img-info">
+                       <p id="job">Men's Fisique, Engineer</p>
+                       <small>token:{{abt.imagedate}}</small>
+                   </div>
+                </div>
+                <div class="abt-text-title">
+                    <p>{{abt.informationsAboutYou}}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+
+                <!--story-->
+                 <h2>Story</h2>
+                <div class="abt-text-img">
+                    
+                    {% for str in story %}
+                        <div class="abt-image">
+                            <div class="img">
+                            <img src="{{str.mainImage.url}}" alt="">
+                            </div>
+                            <div class="img-info">
+                                <p>Men's Fisique, Engineer</p>
+                                <small>token:{{str.imagedate}}</small>
+                            </div>
+                        </div>
+                        <div class="abt-story-desc">
+                            <p>
+                                {{str.description}}
+                            </p>
+                        </div>
+                    {% endfor %}
+                    <div class="abt-text-title">
+                        <h2>Athlete Statistics</h2>
+                        <table>
+                            {% for inf in tableinfos %}
+                                <tr>
+                                    <td>{{inf.key}}</td>
+                                    <th>{{inf.value}}</th>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+
+
+                <!--competition-->
+                <h2>Competitions</h2>
+                {% for comp in competitions %}
+                    <div class="abt-text-img">
+                        <h3>{{comp.competitionName}}</h3>
+                        <div class="abt-image compet-image">
+                        <div class="img">
+                            <img src="{{comp.competitions.url}}" alt="">
+                        </div>
+                        <div class="img-info">
+                            <p>Men's Fisique, Engineer</p>
+                            <small>token:{{comp.imagedate}}</small>
+                        </div>
+                        </div>
+                        <div class="abt-text-title">
+                            <p>{{comp.competitionsText}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            {% endif %}
+                <!--curtisy مجامللات-->
+                {% if courtsey %}
+                <h3>courtesy</h3>
+                    {% for crt in courtsey %}
+                    
+                    <div class="abt-text-img">
+                        <p>
+                            {{crt.description}}
+                        </p>
+                        <div class="abt-image compet-image">
+                           <!--
+
+                                {% if crt.SocielMediaPost%}
+
+                                {{crt.SocielMediaPost}}
+
+                            {% endif %}
+                           --> 
+
+                            <div class="fb-post" data-href="https://web.facebook.com/GOLDENBODYDZ/posts/1635126523317672" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/GOLDENBODYDZ/posts/1635126523317672" class="fb-xfbml-parse-ignore"><p>تحية للرياضي  صوالح رمزي من ولاية تبسة 23 سنة 
+                                يبارك الله له ووفقه</p>Posted by <a href="https://www.facebook.com/GOLDENBODYDZ/">Golden Body DZ</a> on&nbsp;<a href="https://www.facebook.com/GOLDENBODYDZ/posts/1635126523317672">Sunday, June 7, 2020</a></blockquote></div>
+                            {% if crt.image%}
+
+                                <img src="/{{crt.image.url}}" alt="">
+
+                            {% endif %}
+                            
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            
+              
+                
+
+
+
+
+
+        </div>
+    </div>
+{% endblock content %}

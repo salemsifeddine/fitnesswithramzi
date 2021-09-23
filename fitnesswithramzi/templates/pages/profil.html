@@ -1,0 +1,86 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="prfl">
+    
+<div class="profil-page shadow">
+    <h1>Profil</h1>
+    <div class="profil-program">
+        <div class="program-duration">
+            <h4>Program of Week 1</h4>
+        </div>
+        <div class="program-cont">
+            <ol>
+                <li>
+                    <a href="{% url 'persWorkout' %}">program Workout</a>
+                    <a href="{% url 'persWorkout' %}"><button style="background:#32cd32" class="gear-button view">View</button></a>
+                </li>
+                <li>
+                    <a href="{% url 'persNutrition' %}">program nutrition</a>
+                    <a href="{% url 'persNutrition' %}"><button style="background:#32cd32" class="gear-button view">View</button></a>
+                </li>
+                <li>
+                    <a href="{% url 'persAdvice' %}">advices</a>
+                    <a href="{% url 'persAdvice'  %}"><button style="background:#32cd32" class="gear-button view">View</button></a>
+                </li>
+               
+            </ol>
+        </div>
+    </div>
+    <div class="profil-user-updates">
+
+        <div class="updates-duration">
+            <h4>Results of Week 2</h4>
+        </div>
+        <form method='post' enctype="multipart/form-data">
+            {% csrf_token %}
+        <div class="upload-img">
+            <label for="image">
+                 Upload Your image for Week 1:
+                {{form.image}}
+            </label>
+        </div>
+        <div class="weight">
+            <label for="number">
+                Current Weight:
+                {{form.weight}}
+                KG
+            </label>
+        </div>
+        <div class="add">
+            <label for="textarea">
+                Anything to add:
+                {{form.addAnyThing}}
+            </label>
+        </div>
+        <button type="submit" class="gear-button update-btn">Send</button>
+        </form>
+   
+    </div>
+</div>
+<br>
+<br>
+
+
+    {% if dataprofil %}
+    <div class="last-updates ">
+        {% for  inf in dataprofil %}
+
+            <div class="last-up-div">
+                <h3>Week {{inf.week}}</h3>
+                <div class="last-up-cont">
+                    <p>Img: <a href="/{{inf.image.url}}">{{inf.image.url}}</a> </p>
+                    <p>Weight: {{inf.weight}} Kg</p>
+                </div>
+            </div>
+            
+
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+</div>
+
+{% endblock content %}

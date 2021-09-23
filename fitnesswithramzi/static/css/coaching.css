@@ -1,0 +1,93 @@
+.formula{
+    width:75%;
+    margin: auto;
+}
+
+.user-contact{
+    padding:5px;
+}
+.ex-cont p{
+    width:100%;
+    text-align:center;
+    font-size:14px;
+    
+}
+.formula .ex-cont p{
+    width:100%;
+    text-align:center;
+    font-size:14px;
+    color:#00b1ff;
+}
+.formula .ex-cont h2{
+    color:#00b1ff;
+}
+.user-contact .personal-info input{
+    width:100%;
+    height: 5vh;
+    font-size:15px;
+    margin-bottom: 5px;
+    border:1px solid rgba(145, 140, 140, 0.76);
+    border-radius:2px;
+    background:#c3d3d8;
+}
+
+.user-contact .personal-info .checkbox{
+    height:6vh;
+}
+
+.user-contact .personal-info .checkbox{
+    margin-bottom: 5px;
+}
+.user-contact .personal-info .checkbox label{
+    line-height:6vh;
+}
+.user-contact .personal-info .checkbox label input{
+    width: 10%;
+    text-align: start;
+    font-size:14px;
+    margin:0;
+    background:#c3d3d8;
+}
+.user-contact .personal-info textarea{
+    max-width:100%;
+    min-width:99.9%;
+    min-height: 5vh;
+    padding:5px;
+    border:1px solid black;
+    border-radius:4px;
+    font-size:15px;
+    background:#c3d3d8;
+    color:#000;
+}
+
+.user-contact .sport-info{
+    min-height:10vh;
+    padding:10px;
+}
+.user-contact .sport-info .info{
+    width:70%;
+    
+    margin: 10px  auto;
+   
+    padding:5px;
+
+}
+.user-contact .sport-info .info input{
+    width:20%;
+    background:#c3d3d8;
+    border-radius: 4px;
+}
+input{
+    border:1px solid rgba(145, 140, 140, 0.76);
+    padding-left:5px;
+
+}
+
+input{
+    background:#c3d3d8;
+    color:#000;
+}
+
+input,textarea{
+    color:#000;
+}

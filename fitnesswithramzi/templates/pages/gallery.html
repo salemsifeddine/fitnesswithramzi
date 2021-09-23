@@ -1,0 +1,35 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="gall">
+    <h1>Gallery</h1>
+    <div class="gall-cont shadow">
+    {% for image in images %}
+                <a href="/{{image.image.url}}">
+                    <div class="gall-img">
+                        <div class="img">
+                            <img src="/{{image.image.url}}" alt="fitness with ramzi">
+                        </div>
+                        <div class="gall-info">
+                            <p>{{image.place}}</p>
+                            <small>token:{{image.token}}</small>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+    
+        
+
+</div>
+        
+
+        
+
+        
+
+
+    </div>
+</div>
+{% endblock content %}

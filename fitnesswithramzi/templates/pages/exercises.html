@@ -1,0 +1,61 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+<div class="ex block">
+   
+    <div class="choose">
+        <h4>Exercises for:</h4>
+        <select  id="slctex">
+            <option value="All">All</option>
+           {% for muscle in muscles %}
+                <option value="{{muscle}}">{{muscle}}</option>
+           {% endfor %}
+        </select>
+    </div>
+    <h1>Exercises</h1>
+    <br>
+    
+        {% for ex in exercises %}
+        <br>
+        <h2>{{ex.muscle}} Exercises</h2>
+      <div class="ex-cont">
+       {% for e in ex.exercises %}
+        <h3>{{e.musclePart.part}} Exercises</h3>
+            <div class="ex-div">
+                {% if e.image %}
+                <div class="ex-image">
+                    <img src="/{{e.image.url}}" alt="">
+                </div>
+                {% endif %}
+                {% if e.url %}
+                <div class="ex-image">
+                    <iframe src="{{e.url}}" frameborder="0"></iframe>
+                </div>
+                {% endif %}
+                <div class="ex-text">
+                    <div class="ex-text-title"><h3>{{e.exerciseName}} exercises</h3></div>
+                    <div class="ex-text-text"><p>{{e.desc}}</p></div>
+                    <a href="{% url 'programexpublicDet' e.id %}"><div class="seemore">See More</div></a>
+
+                </div>
+            </div>
+            
+            {% endfor %}
+        </div>
+        <br>
+        {% endfor %}
+    
+    <!--another muscle-->
+
+    
+   
+
+
+        </div>
+
+    
+       
+{% endblock content %}

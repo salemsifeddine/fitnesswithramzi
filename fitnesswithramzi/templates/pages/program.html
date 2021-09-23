@@ -1,0 +1,63 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+    
+    <div class=" block program">
+        <div class="choose">
+            <h4>Program for:</h4>
+            <select  id="slctex">
+                <option value="All">All</option>
+               {% for program in programstype %}
+                    <option value="{{program}}">{{program}}</option>
+               {% endfor %}
+            </select>
+        </div>
+        <h1>Program Workout</h1>
+        <div class="program-container">
+           
+            {% for pr in program %}
+                <div class="program-div">
+                    <div class="program-image">
+                        <img src="/{{pr.image.url}}" alt="">
+                    </div>
+                    <div class="program-text">
+                        <div class="program-text-title">
+                            <h3>{{pr.programName}} Program</h3>
+                        </div>
+                        <div class="program-text-text">
+                            <p>{{pr.desc}}</p>
+                            
+                        </div>
+                        <a href="{% url 'programwktpublicDet' pr.id%}"><div class="seemore">See More</div></a>
+                    </div>
+                </div>
+
+            {% endfor %}
+            
+            
+            <div class="program-div">
+                <div class="program-image">
+                    <img src="{% static 'images/nikead2.jpg' %}" alt="">
+                </div>
+                <div class="program-text">
+                    <div class="program-text-title">
+                        <h3>Online Coatching</h3>
+                    </div>
+                    <div class="program-text-text">
+                        <p>
+                          il vitae enim, iusto, deleniti exercitationem eius porro sequi dolor earum cupiditate ad eveniet aperiam dolore id pariatur eligendi sit ea natus cum.
+                            Quasi laudantium odit totam consectetur animi tempore quae accusamus blanditiis molestias deserunt? Atque, ab et temporibus distinctio enim ea tempore tenetur maiores ducimus alias, repudiandae deserunt, aliquid omnis ullam odio.
+                        </p>
+                    </div>
+                    <a href="{% url 'about' %}"><div class="seemore ">See More About Me</div></a>
+                    <a href="{% url 'coaching' %}"><div class="seemore demandez ">Ask For Coaching</div></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock content %}

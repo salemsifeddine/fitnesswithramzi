@@ -1,0 +1,43 @@
+.gall{
+    min-height:50vh;
+    padding:10px;
+    margin-bottom: 30px;
+}
+
+.gall-cont{
+    width:85%;
+    margin: 10px auto;
+    padding:10px;
+    border-radius: 7px;
+}
+
+.gall-cont .gall-img{
+    position: relative;
+    width: 24%;
+    min-height: 150px;
+    overflow:hidden;
+    border-radius:5px;
+    display:inline-block;  
+    margin-left: 0.5%;
+    margin-bottom: 10px;
+}
+.gall-info{
+    width:100%;
+    min-height:16%;
+    position:absolute;
+    padding:5px;
+    bottom:12px;
+    color:#fff;
+    
+}
+.gall-cont .gall-img .img{
+    width:100%;
+    height:100%;
+
+}
+.gall-cont .gall-img .img{
+    width:100%;
+    height:100%;
+
+}
+

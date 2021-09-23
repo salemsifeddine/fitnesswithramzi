@@ -1,0 +1,41 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="personal-program">
+        <h1>Personal Program Workout</h1>
+        <div class="personal-prog-cont shadow">
+        
+               {% for obj in object %}
+               <h2> Day {{obj.day}}</h2>
+            
+                
+               {% for ob in obj.program %}
+
+                    <div class="pers-prog-div">
+                    <h3>{{ob.exerciseName}} Exersice</h3>
+                    <br>
+                    <div class="pers-prog-text">{{ob.description}}
+                    </div>
+                   {% if ob.image %}
+                   <div class="pers-prog-img">
+                    <img src="/{{ob.image.url}}" alt="">                         
+                    </div>
+                     {% endif %}
+                    {% if ob.urlYoutubeVedio %}
+                    <div class="pers-prog-img">
+                        <iframe src="{{ob.urlYoutubeVedio}}" frameborder="0"></iframe>
+                                                
+                    </div>
+                    {% endif %}
+                </div>
+               {% endfor %}
+               {% endfor %}
+            
+
+        </div>
+
+    </div>
+    
+
+{% endblock content %}

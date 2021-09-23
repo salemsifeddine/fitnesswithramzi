@@ -1,0 +1,42 @@
+{
+    "english":{
+        "/":{
+            "abttxth2":"Who is 'Ramzi Soualeh' ",
+            "job":"Men's Fisique, Engineer"
+        },
+        "/about":{
+            "abttxth2":"Who is 'Ramzi Soualeh' ",
+            "job":"Men's Fisique, Engineer",
+            "about":"about"
+        },
+        "/gallery":{
+            "abttxth2":"Who is 'Ramzi Soualeh' ",
+            "job":"Men's Fisique, Engineer"
+        }
+        
+    },
+    "français":{
+       "/":{ 
+           "abttxth2":"c'est qui 'Ramzi Soualeh' ",
+            "job":"Men's Fisique, Inginieur"
+        },
+        "/about":{ 
+            "abttxth2":"c'est qui 'Ramzi Soualeh' ",
+             "job":"Men's Fisique, Inginieur"
+         },
+         "/gallery":{ 
+            "abttxth2":"c'est qui 'Ramzi Soualeh' ",
+             "job":"Men's Fisique, Inginieur"
+         }   
+    },
+    "العربية":{
+        "/":{
+            "abttxth2":"من هو رمزي صوالح ",
+            "job":"رياضي, مهندس"
+        },
+        "/about":{
+            "abttxth2":"من هو رمزي صوالح ",
+            "job":"رياضي, مهندس"
+        }
+    }
+}

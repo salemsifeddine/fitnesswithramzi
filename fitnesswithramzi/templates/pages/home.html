@@ -1,0 +1,107 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block slide %}
+<div class="slider" id="slide">
+    
+    {% trans "let's translate this" %}
+    <div class="imagesslide">
+        <div class="slide-image">
+            <img id="img" src="{% static 'images/ramzibarfix.jpeg' %}" alt="{{images}}">
+        </div>
+    </div>
+    <div class="center">
+        
+        
+    </div>
+
+</div> 
+{% endblock slide %}
+
+{% block content %}
+
+<div class="block home">
+    <div class="title-home title-logo">
+        <h1>Fitness With Ramzi</h1>
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+       
+    </div>
+    <div class=" block program">
+       
+        <div class="program-container">
+           
+            <div class="home-div">
+                    <div class="program-text-title">
+                        <h3>Check Our Programs for Workout</h3>
+                    </div>
+                    <div class="program-text-text home-text">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore odit delectus sapiente provident perspiciatis impedit iusto esse eveniet voluptates consequuntur corporis accusantium ad nemo repellat, qui aliquid porro voluptate ipsum?
+                          lor dignissimos est ad laudantium animi amet vitae repudiandae, quis ducimus cumque iure corrupti quae perspiciatis!
+                          lor dignissimos est ad laudantium animi amet vitae repudiandae, quis ducimus cumque iure corrupti quae perspiciatis!
+                           temporibus distinctio enim ea tempore tenetur maiores ducimus alias, repudiandae deserunt, aliquid omnis ullam odio.
+                        </p>
+                        
+                    </div>
+                    <a href="{% url 'program' %}"><div class="seemore">See More</div></a>
+            </div>
+
+            <div class="home-div">
+                <div class="program-text-title">
+                    <h3>Check Our Programs for Nutrition</h3>
+                </div>
+                <div class="program-text-text home-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore odit delectus sapiente provident perspiciatis impedit iusto esse eveniet voluptates consequuntur corporis accusantium ad nemo repellat, qui aliquid porro voluptate ipsum?
+                      lor dignissimos est ad laudantium animi amet vitae repudiandae, quis ducimus cumque iure corrupti quae perspiciatis!
+                      lor dignissimos est ad laudantium animi amet vitae repudiandae, quis ducimus cumque iure corrupti quae perspiciatis!
+                       temporibus distinctio enim ea tempore tenetur maiores ducimus alias, repudiandae deserunt, aliquid omnis ullam odio.
+                    </p>
+                    
+                </div>
+                <a href="{% url 'nutrition' %}"><div class="seemore">See More</div></a>
+        </div>
+
+        <div class="home-div">
+            <div class="program-text-title">
+                <h3>Check Our Advices</h3>
+            </div>
+            <div class="program-text-text home-text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore odit delectus sapiente provident perspiciatis impedit iusto esse eveniet voluptates consequuntur corporis accusantium ad nemo repellat, qui aliquid porro voluptate ipsum?
+                  lor dignissimos est ad laudantium animi amet vitae repudiandae, quis ducimus cumque iure corrupti quae perspiciatis!
+                  lor dignissimos est ad laudantium animi amet vitae repudiandae, quis ducimus cumque iure corrupti quae perspiciatis!
+                   temporibus distinctio enim ea tempore tenetur maiores ducimus alias, repudiandae deserunt, aliquid omnis ullam odio.
+                </p>
+                
+            </div>
+            <a href="{% url 'advices' %}"><div class="seemore">See More</div></a>
+        </div>
+
+
+    
+        
+        <div class="home-div">
+            <div class="program-text-title">
+                <h3>Dm Us For Online Coatching</h3>
+            </div>
+            <div class="program-text-text home-text">
+                <p>
+                  il vitae engim, iusto, deleniti exercitationem eius porro sequi dolor earum cupiditate ad eveniet aperiam dolore id pariatur eligendi sit ea natus cum.
+                    Quasi laudantium odit totam consectetur animi tempore quae accusamus blanditiis molestias deserunt? Atque, ab et temporibus distinctio enim ea tempore tenetur maiores ducimus alias, repudiandae deserunt, aliquid omnis ullam odio.
+                </p>
+            </div>
+            <a href="{%url 'coaching'%}"><div class="seemore ">See More</div></a>
+            <a href="#"><div class="seemore demandez ">Ask For Coaching</div></a>
+        </div>
+   
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+
+{% block content %}
+    
+    <div class=" block program">
+        <h1>Advices</h1>
+        <div class="program-container">
+           
+
+            <!--advices concerning food and nutrition-->
+            {% for adv in advices %}
+                <h2>{{adv.advicesFor}}</h2>
+                <div class="advice-div ">
+                    
+                    <div class="program-text advice-text">
+                    
+                            <p>{{adv.adviceContent}}</p>
+
+                            {% if adv.url %}
+                            <!--dalil zaema ykon vedio wela photo-->
+                            <iframe src="{{adv.url}}" frameborder="0"></iframe>
+                            {% endif %}
+
+                            <!--Or-->
+                            {% if adv.adviceImage %}
+                                <div class="advice-img">
+                                    <img src="{{adv.adviceImage.url}}" alt="">
+                                </div>
+                            {% endif %}
+                        
+                        
+                    </div>
+                </div>
+            {% endfor %}
+
+            
+            
+        </div>
+    </div>
+
+{% endblock content %}

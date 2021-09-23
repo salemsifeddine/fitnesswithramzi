@@ -1,0 +1,214 @@
+.program{
+   min-height:50vh;
+   padding:10px;
+   margin-bottom: 30px;
+}
+.shadow{
+    box-shadow: 5px 10px 15px 10px #00b3ff80;
+}
+
+.program .program-container{
+    width:85%;
+    margin: 10px auto;
+    box-shadow: 5px 10px 15px 10px #00b3ff80;
+    padding:10px;
+    border-radius: 7px;
+}
+
+.program .program-container .program-div{
+    width:100%;
+    min-height:45vh;
+    max-height:55vh;
+    border-radius: 5px;
+    background: #343a40;
+    display:flex;
+    margin: 0 auto 20px;
+    
+    overflow:hidden;
+}
+.program .program-container .program-div .program-image, .program .program-container .program-div .program-text{
+    width:50%;
+    height:100%;
+    overflow:hidden;
+}
+.program-div .program-image img{
+    width:100%;
+    height:100%;
+}
+.program-div .program-text{
+    padding:7px;
+}
+.program-div .program-text .program-text-title{
+    text-align: center;
+    letter-spacing:1.5px;
+    color:#000;
+}
+.program-div .program-text .program-text-title h3{
+    
+    color:#00b1ff;
+}
+.program-div .program-text .program-text-text{
+    padding:5px;
+    color:#000;
+}
+
+.seemore{
+    width:180px;
+    height:32px;
+    border-radius: 15px;
+    background: #0046ff;
+    color:#fff;
+    text-align: center;
+    margin: 5px auto;
+    text-decoration: none;
+    line-height: 32px;
+    transition: all .3s ease-in-out;
+}
+.demandez{
+    background: rgba(27, 116, 27, 0.856);
+}
+.seemore:hover{
+    background:transparent;
+    border:2px solid  rgba(78, 78, 153, 0.753);
+    
+}
+
+.gear{
+    width:20%;
+    height:100vh;
+    background-color: #00b1ff;
+    position:  fixed;
+    left:-20%;
+    z-index:99999;
+}
+.gear-gear{
+    width:35px;
+    height:50px;
+    border-radius: 0 50px 50px 0;
+    background-color:  #00b1ff;
+    position: absolute;
+    top:30%;
+    right:-35px;
+    cursor:pointer;
+    z-index:99999;
+
+}
+.gear-profil{
+    min-height:20%;
+    max-height: 40%;
+    width:100%;
+    border-bottom:1px solid rgba(54, 51, 51, 0.678);
+    color:#fff;
+    padding:10px;
+}
+.margin-top{
+    margin-top:5vh;
+}
+.padding-top{
+    padding-top:5vh;
+}
+.gear-profil span{
+    font-size:12px;
+    text-align:center;
+}
+.gear-button{
+    width:100%;
+    height:4.5vh;
+    text-align: center;
+    color:#fff;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    background:#0044ffa8;
+    border:none;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:300;
+}
+.login-div{
+    width:30%;
+    margin: 20px auto;
+}
+.login input{
+    width:100%;
+    height:4.5vh;
+    border:1px solid rgba(145, 140, 140, 0.76);
+    padding-left:5px;
+    border-radius: 5px;
+    margin-bottom:2px;
+}
+.gear-content{
+    width:100%;
+    height:60%;
+
+}
+.gear-content-title{
+    width:100%;
+    text-align: center;
+    color:#fff;
+    padding:10px;
+}
+
+.gear-content-list{
+    padding:8px;
+}
+.gear-content-list ul {
+    list-style: none;
+}
+.gear-content-list ul a{
+    text-decoration: none;
+}
+.gear-content-list ul  li{
+    padding: 5px;
+    margin-bottom: 5px;
+    color:#fff;
+    letter-spacing: 1.5px;
+}
+li{
+    text-align:center;
+    width:100%;
+}
+.main-nav .list ul li::after{
+    content:'';
+    width:0;
+    height:1.8px;
+    display:block;
+    background:rgba(128, 93, 93, 0.671);
+    transition: all .5s ease-in;
+}
+.main-nav .list ul li:hover::after{
+    width: 100%;
+    
+}
+
+.choose{
+    width:25%;
+    height: 25px;
+    font-size:15px;
+    display:flex;
+}
+.choose h4{
+    width:40%;
+}
+
+#slctex, #select{
+    width:60%;
+    height:100%;
+    text-align:center;
+    background:rgba(136, 136, 136, 0.582); 
+    border-radius:8px;
+    outline:none;
+    border:none;
+    letter-spacing: 1.5px;
+    font-size:15px;
+    padding:2px;
+}
+
+#slctex option, #select option{
+    border:none;
+    outline:none;
+    letter-spacing: 1.5px;
+    font-size:15px
+}
+.ex-text a, .program-text a{
+    text-decoration: none;
+}

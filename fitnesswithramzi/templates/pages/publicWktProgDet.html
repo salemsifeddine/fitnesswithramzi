@@ -1,0 +1,45 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="personal-program">
+        <h1>Public Program Workout</h1>
+        
+       <br>
+               {%  for obj in object %}
+               <br>
+                <h2> Day {{obj.day}}</h2>
+        <div class="personal-prog-cont shadow">
+                
+                   
+                
+                    
+                   {% for ob in obj.data %}
+                    <div class="pers-prog-div">
+                        <h3> {{ob.exerciseName}} h</h3>
+                        <br>
+                        <div class="pers-prog-text">
+                            <p>
+                                {{ob.desc}}
+                            </p>
+                        </div>
+                        <div class="pers-prog-img">
+                            <a href="/{{ob.image.url}}">
+                                <img src="/{{ob.image.url}}" alt=""> 
+                            </a>
+                                                
+                        </div>
+                    </div>
+                    
+                {% endfor %}
+                
+            </div>
+            <br>
+               {% endfor %}
+
+        
+
+    </div>
+    
+
+{% endblock content %}

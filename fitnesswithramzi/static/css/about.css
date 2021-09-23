@@ -1,0 +1,111 @@
+.abt{
+    min-height:50vh;
+    padding:10px;
+    margin-bottom: 30px;
+}
+
+.abt-cont{
+    width:85%;
+    margin: 10px auto;
+    padding:10px;
+    border-radius: 7px;
+   
+}
+
+
+.div-abt-cont{
+    margin-bottom: 60px;
+}
+.div-abt-cont:not(:first-of-type){
+  
+    border-top: 1px solid black;
+}
+
+.abt-text-img{
+    width:100%;
+    min-height:50vh;
+    overflow:hidden;
+}
+.abt-image{
+    width:35%;
+    height:70vh;
+    overflow:hidden;
+    margin:0 auto;
+    border-radius: 5px;
+    position:relative;
+}
+.abt-image .img{
+    width:100%;
+    height:100%;
+}
+.abt-image .img img{
+    width:100%;
+    height:100%;
+    
+
+}
+
+.img-info{
+    width:100%;
+    height:15%;
+    position:absolute;
+    padding:10px;
+    bottom:0;
+    border-top:2px solid #fff;
+    border-radius: 50px 50px 0 0 ;
+}
+.abt-image  .img-info p{
+    text-align: center;
+    color:#fff;
+    font-size:19px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-overflow: clip;
+    letter-spacing:1.5px;
+    
+}
+
+.abt-image  .img-info small{
+    color:#fff;
+}
+.abt-text-img{
+    padding:7px;
+}
+.abt-text-img .abt-text-title{
+    text-align: center;
+    letter-spacing:1.5px;
+    color:#000;
+}
+
+.abt-text-img .abt-text-text{
+    padding:5px;
+    color:#000;
+}
+
+td, tr, th{
+    padding:8px;
+    color: #fff;
+}
+table{
+    width:40%;
+    margin:5px auto;
+    background: #6c7a6cb2;
+    border-radius:5px;
+}
+td{
+    width:40%;
+
+}
+h1{
+    width:100%;
+    text-align:center
+}
+
+.compet-image{
+    width:80%
+}
+
+.abt-cont h2{
+    color:#00b1ff;
+}

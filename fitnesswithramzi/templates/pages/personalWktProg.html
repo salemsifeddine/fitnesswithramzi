@@ -1,0 +1,39 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+    
+    <div class=" block program">
+        <h1>Personal Program Workout</h1>
+        <div class="program-container">
+           
+            {% for pr in program %}
+               
+                    <div class="program-div">
+                        <div class="program-image">
+                            <img src="/{{pr.image.url}}" alt="">
+                        </div>
+                        <div class="program-text">
+                            <div class="program-text-title">
+                                <h3>Day {{pr.day}}</h3>
+                            </div>
+                            <div class="program-text-text">
+                                <p>{{pr.content}}</p>
+                                
+                            </div>
+                            <a href="{% url 'persWorkoutDet' pr.id%}"><div class="seemore">See More </div></a>
+                        </div>
+                    </div>
+
+                
+            {% endfor %}
+            
+            
+            
+
+        </div>
+    </div>
+
+{% endblock content %}

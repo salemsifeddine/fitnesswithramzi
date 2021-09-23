@@ -1,0 +1,104 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<div class="ex block formula">
+   
+    <h1>Online Coaching With Ramzi</h1>
+    <br>
+    <div class="ex-cont">
+        <p>don't hesitate to contact us</p>
+       <h2>Contact Us Formula</h2>
+        <div class="user-contact">
+
+            <form method="post">
+                {% csrf_token %}
+            <div class="personal-info">
+                <label for="text">
+                    
+                    Full Name:{{form.fullname}}
+                </label>
+                
+                <label for="email">
+                    
+                    Email:{{form.email}}
+                </label>
+                
+                <label for="text">
+                    Date of birth:{{form.birthday}}
+                </label>
+                
+                <label for="">Sexe:
+                    <div class="checkbox">
+                        <label for="checkbox">
+                            Male {{form.sexe_male}}
+                        </label>
+                        <label for="checkbox">
+                            Female {{form.sexe_female}}
+                        </label>
+                    </div>
+                </label>
+    
+                <label for="text">
+                    Address:{{form.address}}
+                </label>
+                <label for="text">
+                    City:{{form.city}}
+                </label>
+                <label for="text">
+                    Phone Number:{{form.phone_number}}
+                </label>
+                <label for="text">
+                    Subject: {{form.subject}}
+                </label>
+            </div>
+            <div class="sport-info">
+                <h3>Personal Sport Information</h3>
+                <div class="info">
+                    <label for="number">
+                        Max reps in Pull Ups
+                        {{form.pull}}
+                    </label>
+                </div>
+               <div class="info">
+                <label for="number">
+                    Max reps in Push Ups
+                    {{form.push}}
+                </label>
+               </div>
+                <div class="info">
+                    <label for="number">
+                        Max reps in Deadlift
+                        {{form.dlift}}
+                    </label>
+                </div>
+                <div class="info">
+                    <label for="number">
+                        Max reps in Squat
+                        {{form.squat}}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="send">
+            <input type="submit" style="background: #00b1ff;" class="gear-button" value="Send">
+            </form>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+{% endblock content %}
