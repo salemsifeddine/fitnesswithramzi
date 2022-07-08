@@ -1,14 +1,14 @@
 {% extends 'pages/base.html' %}
 {% load static %}
-{% load i18n %}
+
 
 {% block slide %}
 <div class="slider" id="slide">
     
-    {% trans "let's translate this" %}
+    
     <div class="imagesslide">
         <div class="slide-image">
-            <img id="img" src="{% static 'images/ramzibarfix.jpeg' %}" alt="{{images}}">
+            <img id="img" src="{% static 'images/logo-fitness1.gif' %}" alt="{{images}}">
         </div>
     </div>
     <div class="center">
@@ -25,7 +25,7 @@
     <div class="title-home title-logo">
         <h1>Fitness With Ramzi</h1>
         <div class="logo">
-            <img src="" alt="">
+            <img src="{% static 'images/logo-fitness2.gif' %}" alt="">
         </div>
        
     </div>
@@ -94,8 +94,8 @@
                     Quasi laudantium odit totam consectetur animi tempore quae accusamus blanditiis molestias deserunt? Atque, ab et temporibus distinctio enim ea tempore tenetur maiores ducimus alias, repudiandae deserunt, aliquid omnis ullam odio.
                 </p>
             </div>
-            <a href="{%url 'coaching'%}"><div class="seemore ">See More</div></a>
-            <a href="#"><div class="seemore demandez ">Ask For Coaching</div></a>
+            <a href="{%url 'about'%}"><div class="seemore ">See More About Us</div></a>
+            <a href="{%url 'coaching'%}"><div class="seemore demandez ">Ask For Coaching</div></a>
         </div>
    
 

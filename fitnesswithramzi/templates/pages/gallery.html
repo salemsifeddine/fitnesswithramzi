@@ -3,14 +3,27 @@
 
 
 {% block content %}
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Contact</h2>
+            </div>
+            <div class="col-12">
+                <a href="">Home</a>
+                <a href="">Gallery</a>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="gall">
     <h1>Gallery</h1>
     <div class="gall-cont shadow">
     {% for image in images %}
-                <a href="/{{image.image.url}}">
+                <a href="{{image.image.url}}">
                     <div class="gall-img">
                         <div class="img">
-                            <img src="/{{image.image.url}}" alt="fitness with ramzi">
+                            <img src="{{image.image.url}}" alt="fitness with ramzi">
                         </div>
                         <div class="gall-info">
                             <p>{{image.place}}</p>

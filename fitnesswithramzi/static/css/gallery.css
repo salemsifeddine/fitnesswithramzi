@@ -2,6 +2,7 @@
     min-height:50vh;
     padding:10px;
     margin-bottom: 30px;
+    margin-top:100px
 }
 
 .gall-cont{
@@ -9,19 +10,24 @@
     margin: 10px auto;
     padding:10px;
     border-radius: 7px;
+    
 }
 
 .gall-cont .gall-img{
     position: relative;
     width: 24%;
-    min-height: 150px;
-    overflow:hidden;
+    min-height: 250px;
+    max-height: 400px;
+    background-color: #343148;
     border-radius:5px;
     display:inline-block;  
     margin-left: 0.5%;
     margin-bottom: 10px;
+    
+    
 }
 .gall-info{
+  
     width:100%;
     min-height:16%;
     position:absolute;
@@ -31,13 +37,16 @@
     
 }
 .gall-cont .gall-img .img{
-    width:100%;
-    height:100%;
+    width: 100%;
+    min-height: 329px;
+    max-height: 330px;
+    overflow: hidden;
 
 }
-.gall-cont .gall-img .img{
-    width:100%;
-    height:100%;
-
+.gall-cont .gall-img .img img{
+    width: 100%;
+    height: 100%;
+    overflow:hidden
 }
+
 

@@ -9,8 +9,6 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.views.generic import *
-from django.utils.translation import gettext as _
-from googletrans import Translator
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializer import Exmple
@@ -31,14 +29,6 @@ class Login(LoginView):
     template_name="pages/base.html"
 
 def home(request):
-    trans= _('hello')
-    translator = Translator()
-    translation =translator.translate("Hi every one I hope you are doing well", dest='ar')
-    print(f'{translation.origin} is in {translation.src} ==> {translation.text}  [{translation.dest}]')
-
-
-    if request.method == "POST":
-        print("yess post")
    
     images_slide = SlideImages.objects.all()
     images=[]
@@ -49,8 +39,7 @@ def home(request):
         
         "images":images,
         "stylesheet":"static/css/home.css",
-        "title":"Home",
-        'trans':trans
+        "title":"Home"
         
     }
     return render(request, "pages/home.html",data)
@@ -200,7 +189,7 @@ def coaching(request):
         "title":"Online Coaching"
     }
     
-    return render(request, "pages/coaching.html",data)
+    return render(request, "pages/contact.html",data)
 
 
 def thank(request):

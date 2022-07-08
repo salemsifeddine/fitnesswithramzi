@@ -2,6 +2,7 @@
    min-height:50vh;
    padding:10px;
    margin-bottom: 30px;
+   margin-top: 100px;
 }
 .shadow{
     box-shadow: 5px 10px 15px 10px #00b3ff80;
@@ -20,7 +21,7 @@
     min-height:45vh;
     max-height:55vh;
     border-radius: 5px;
-    background: #343a40;
+    background: #343148;
     display:flex;
     margin: 0 auto 20px;
     
@@ -37,6 +38,7 @@
 }
 .program-div .program-text{
     padding:7px;
+    color: #000;
 }
 .program-div .program-text .program-text-title{
     text-align: center;
@@ -181,10 +183,10 @@ li{
 }
 
 .choose{
-    width:25%;
-    height: 25px;
-    font-size:15px;
-    display:flex;
+    width: 32%;
+    height: 32px;
+    font-size: 15px;
+    display: flex;
 }
 .choose h4{
     width:40%;

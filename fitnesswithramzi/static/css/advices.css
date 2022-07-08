@@ -3,11 +3,14 @@
     min-height:45vh;
     padding: 10px;
     border-radius: 5px;
-    background:#343a40;
+    
    
     margin: 0 auto 20px;
    
     overflow:hidden;
+}
+.advice-div .program-text p {
+    color:#343148;
 }
 
 iframe, .advice-img{

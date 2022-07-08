@@ -1,6 +1,7 @@
 .formula{
     width:75%;
     margin: auto;
+    margin-top: 100px;
 }
 
 .user-contact{
@@ -12,10 +13,10 @@
     font-size:14px;
     
 }
-.formula .ex-cont p{
+.formula .ex-cont p, .message{
     width:100%;
     text-align:center;
-    font-size:14px;
+    font-size:15px;
     color:#00b1ff;
 }
 .formula .ex-cont h2{
@@ -28,7 +29,7 @@
     margin-bottom: 5px;
     border:1px solid rgba(145, 140, 140, 0.76);
     border-radius:2px;
-    background:#c3d3d8;
+    background:#ffffff;
 }
 
 .user-contact .personal-info .checkbox{
@@ -46,7 +47,7 @@
     text-align: start;
     font-size:14px;
     margin:0;
-    background:#c3d3d8;
+    background:#ffffff;
 }
 .user-contact .personal-info textarea{
     max-width:100%;
@@ -56,7 +57,7 @@
     border:1px solid black;
     border-radius:4px;
     font-size:15px;
-    background:#c3d3d8;
+    background:#ffffff;
     color:#000;
 }
 
@@ -74,7 +75,7 @@
 }
 .user-contact .sport-info .info input{
     width:20%;
-    background:#c3d3d8;
+    background:#ffffff;
     border-radius: 4px;
 }
 input{
@@ -84,7 +85,7 @@ input{
 }
 
 input{
-    background:#c3d3d8;
+    background:#ffffff;
     color:#000;
 }
 

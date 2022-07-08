@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'ramzifitness.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'ramzi_database',
+        'USER': 'postgres',
+        'PASSWORD': '33025340Ss',
+        'HOST': 'localhost',
+       
     }
 }
 
@@ -112,7 +116,7 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
-USE_I18N = True
+USE_I18N = False
 
 USE_L10N = True
 

@@ -39,79 +39,34 @@
         }
         var csrftoken = getToken('csrftoken')
     </script>   
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet"> 
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="ybwvWpFw"></script>
 
     <div class="main">
-        <div class="gear">
-            <div class="gear-gear" id="gear-gear"></div>
-            {% if user.is_authenticated %}
-            <div class="gear-profil margin-top">
-                
-                        <div class="profil">
-                            <div class="info">
-                                <div class="picture">
-                                    <img src="\media\exercisespublic\airpods_YvrGnyh.jpg" alt="ramzi">
-                                </div>
-                                <div class="username">
-                                    <h4>Heloo, {{request.user.username}}</h4>
-                                </div>
-                            </div>
-                            <a href="{% url 'profil' %}">
-                                <button style="background:#32cd32" class="gear-button green " type="submit">See Profil</button>
-                            </a>
-                            
-                        </div>
-                        
-                <div class="sign-in">
-                    <br>
-                    <a href="{% url 'logout' %}">
-                        <button class="gear-button" type="submit">Log Out</button>
-                    </a>
-                </div>
-            </div>
-            {% else %}
-            <div class="gear-profil padding-top">
-                        <div class="login">
-                            <h3>Log In</h3>
-                                <a href="{% url 'login' %}">
-                                    <button class="gear-button" type="submit">Log In</button>
-                                </a>
-                            
-                        </div>
-                <br>
-                <div class="sign-in">
-                    
-                    <a href="{% url 'coaching' %}">
-                        <span>
-                            Don't have an Account!
-                            Contact Us first to Have one!
-                        </span>
-                        <button class="gear-button">Contact Us</button>
-                    </a>
-                </div>
-            </div>
-            {% endif %}
-            <div class="gear-content">
-                <div class="gear-content-title"><h3>Check:--</h3></div>
-                <div class="gear-content-list">
-                    <ul>
-                        <a href="{% url 'program' %}"><li>Program workout</li></a>
-                        <a href="{% url 'exercises' %}"><li>Exercises</li></a>
-                        <a href="{% url 'nutrition' %}"><li>Nutrition</li></a>
-                        <a href="{% url 'advices' %}"> <li>Advices</li></a>
-                        {% if not user.is_authenticated %}
-                            <a href="{%url 'coaching'%}"><li class="bordertop">Ask Us For Online Coatching</li></a>                
-                        {% endif %}
-                    </ul>
-                </div>
         
-            </div>
-         </div>
-        <div class="head">
+         
+        {% comment %} <div class="head">
             <nav>
+                
                 <div class="contact">+213791517930</div>
                 <div class="languages-available">
                     <select  id="select">
@@ -125,21 +80,71 @@
                 <div class="logo">RsFitness</div>
                 <div class="list ">
                    <ul>
-                       <li><a href="{% url 'home' %}">Home</a></li>
-                       <li><a href="{% url 'program' %}">Workout </a></li>
-                       <li><a href="{% url 'about' %}">About</a></li>
-                       <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                       <li id="contact"><a href="">Contact</a></li>
+                        
                    </ul>
                 </div>
             </nav>
             
                 
         
-        </div>
+        </div> {% endcomment %}
 
         
-            
+             <!-- Top Bar Start -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="far fa-clock"></i>
+                                <h2>8:00 - 9:00</h2>
+                                <p>Mon - Fri</p>
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <h2>+123 456 7890</h2>
+                                <p>For Appointment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="/" class="navbar-brand">Fitness<span>With</span>Ramzi</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="{% url 'home' %}"  class="nav-item nav-link active">Home</a> 
+                        <a href="{% url 'program' %}" class="nav-item nav-link">Workout </a> 
+                        <a href="{% url 'gallery' %}" class="nav-item nav-link">Gallery</a> 
+                        <a href="{% url 'advices' %}" class="nav-item nav-link">Advices</a> 
+                        <a href="{% url 'coaching' %}" class="nav-item nav-link">Contact</a> 
+                        <a href="{% url 'about' %}" class="nav-item nav-link">About</a> 
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
                
             {% block slide %}
 
@@ -154,60 +159,39 @@
       
 
     </div>
-    <footer id="footer" class="block">
-        <div class="infos">
-            <div class="social-media">
-                <h2>Social Media</h2>
-                <div class="social-m">
-                    <div class="logo-social">
-                        <p><i class="fab fa-instagram"></i>facebook</p>
+     <!-- Footer Start -->
+     <div class="footer wow fadeIn" data-wow-delay="0.3s">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">Fitness<span>with</span>ramzi</a>
+                    <h3>el-houjebat, Tébessa, ALG</h3>
+                    <div class="footer-menu">
+                        <p>+012 345 67890</p>
+                        <p>info@example.com</p>
                     </div>
-                    <div class="info-social">
-                        <a href="#">devell.py</a>
+                    <div class="footer-social" style="display:flex">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    
-                </div>
-                <div class="social-m">
-                    <div class="logo-social">
-                        <p><i class="fab fa-facebook"></i>facebook</p>
-                    </div>
-                    <div class="info-social">
-                        <a href="#">salem sif eddine</a>
-                    </div>
-                    
-                </div>
-                
-            </div>
-
-            <div class="logofooter">
-                <div class="logo-m">
-                    <img src="{% static 'images/ramzi1.jpg' %}" alt="">
-                </div>
-                <div class="logo-text">
-                    <p>For the Best!</p>
                 </div>
             </div>
-
-           
-            <div class="links">
-                <h2>Links</h2>
-                <div class="links-m">
-                    <ul>
-                        <li><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="{% url 'program' %}">Workout </a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
-                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                        <li id="contact"><a href="{%url 'coaching'%}">Contact</a></li>
-                    </ul>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">Fitness with ramzi</a>, All Right Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Made with love By <a href="https://htmlcodex.com">E-service</a></p>
+                    </div>
                 </div>
-                
             </div>
-            
         </div>
-        <div class="copyright">
-            <p>&copy; Copyright RamziFitness 2021</p>
-        </div>
-    </footer>
+    </div>
+    <!-- Footer End -->
 
     <script src="{% static 'js/jquery.js' %}" ></script>
     <script src="{% static 'js/main.js' %}" ></script>

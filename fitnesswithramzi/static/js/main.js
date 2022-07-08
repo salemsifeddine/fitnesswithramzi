@@ -115,7 +115,10 @@ if(voiderror){
 
 }
 //get footer offset
-var footerofsset = $("#footer").offset().top;
+if($("#footer")){
+    var footerofsset = $("#footer").offset().top;
+}
+
 //get element that contain id called contact
 var contactele = $("#contact");
 
