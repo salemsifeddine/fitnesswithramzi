@@ -50,23 +50,76 @@
                     <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="contact-form">
                             <div id="success"></div>
-                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <form method="post" name="sentMessage" id="contactForm" novalidate="novalidate">
+                                {% csrf_token %}
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                    {{form.fullname}}
+                                    {% comment %} <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" /> {% endcomment %}
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                    {{form.email}}
+                                    {% comment %} <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" /> {% endcomment %}
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                    {{form.birthday}}
+                                    {% comment %} <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" /> {% endcomment %}
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                    {{form.phone_number}}
+                                    {% comment %} <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" /> {% endcomment %}
                                     <p class="help-block text-danger"></p>
                                 </div>
+                                
+                                <div class="control-group">
+                                    {<div class="checkbox">
+                                        <label for="checkbox" style="color:gray">
+                                            Male {{form.sexe_male}}
+                                        </label>
+                                        <label for="checkbox"  style="color:gray">
+                                            Female {{form.sexe_female}}
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="control-group">
+                                    {{form.address}}
+                                    {% comment %} <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" /> {% endcomment %}
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    {{form.city}}
+                                    {% comment %} <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" /> {% endcomment %}
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    {{form.subject}}
+                                    {% comment %} <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" /> {% endcomment %}
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    {{form.pull}}
+                                    {% comment %} <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" /> {% endcomment %}
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    {{form.push}}
+                                    {% comment %} <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" /> {% endcomment %}
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    {{form.dlift}}
+                                    {% comment %} <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" /> {% endcomment %}
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    {{form.squat}}
+                                    {% comment %} <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" /> {% endcomment %}
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                 
                                 <p class="message">Please Check Your Informations Before Sending Them</p>
                                 <div>
                                     <button class="btn" type="submit" id="sendMessageButton">Send Message</button>

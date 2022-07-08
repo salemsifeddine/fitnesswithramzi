@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% block css %}
+    {% endblock css %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/program.css' %}">
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
@@ -192,6 +194,8 @@
         </div>
     </div>
     <!-- Footer End -->
+    {% block js %}
+    {% endblock js %}
 
     <script src="{% static 'js/jquery.js' %}" ></script>
     <script src="{% static 'js/main.js' %}" ></script>
@@ -200,5 +204,6 @@
     <script src="{% static 'js/tweenMax.min.js' %}"></script>
     <script src="{% static 'js/hoverEffect.umd.js' %}"></script>
     <script src="{% static 'js/hover.js' %}"></script>
+
 </body>
 </html>
