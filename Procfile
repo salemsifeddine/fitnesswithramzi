@@ -1,0 +1,1 @@
+web: gunicorn ramzifitness.wsgi --log-file -
